@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - "0.10"
+  - "0.12"
+  - "4.0"
+  - "node"
+  - "iojs"
+sudo: false
+install: (cd nodejs && npm install)
+script: 
+  - (cd nodejs && npm test)
+notifications:
+  email:
+    on_success: change
+    on_failure: change
