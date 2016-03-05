@@ -1,5 +1,8 @@
 # Angular Web App 项目(抛离Ionic)
 
+###克隆代码
+    git clone https://github.com/xudao520/newApp.git;
+
 ### 自动化程序
 1. 压缩html代码.
 
