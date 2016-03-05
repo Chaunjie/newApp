@@ -1,0 +1,116 @@
+.activated{
+    background:#d9d9d9;
+}
+
+.activated-body{
+    background: transparent;
+    background: rgba(0,0,0,0.3);
+    overflow: hidden;
+    z-index:10;
+}
+
+/* css for alert */
+#aui-box {
+    position: absolute;
+    width: 80%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    margin-left: -40%;
+    background: #ffffff;
+    z-index: 2;
+    overflow: hidden;
+    opacity: 1;
+}
+#aui-box.fadeIn {
+    opacity: 1;
+    /*-webkit-animation: fadeIn .3s;*/
+}
+#aui-box-header {
+    padding: 10px 15px 0 15px;
+    text-align: center;
+    font-size: 1em;
+}
+#aui-box-body {
+    padding: 15px;
+    overflow: hidden;
+    font-size: 0.875em;
+}
+#aui-box-footer {
+    position: relative;
+    overflow: hidden;
+    font-size: 1em;
+}
+.aui-box-btn {
+    float: left;
+    text-align: center;
+    position: relative;
+    padding: 15px 0;
+    z-index: 999;
+}
+.aui-box-btn:after {
+    border-right: 1px solid #dbdbdb;
+    border-top: 1px solid #dbdbdb;
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-transform-origin: 0 0;
+    -webkit-transform: scale(1);
+    pointer-events: none;
+}
+.overflow{
+    width:100%;
+    height:100%;
+    position: fixed;
+    top:0;
+    left:0;
+    background:rgba(0,0,0,0.8);
+}
+.aui-box-btn:last-child:after {
+    border-right: 0;
+}
+
+/* css for actionSheet */
+.actionSheet {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width:100%;
+    background:#eee;
+}
+
+.actionSheet-btn {
+    padding: 10px 0px;
+    fonts-size: 16px;
+    background: #fff;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.actionSheet-menus{
+    margin-bottom:10px;
+}
+
+.actionSheet-menus > .actionSheet-btn{
+    content:'';
+    border-bottom: 1px solid #efefef;
+    display: block;
+    content: '';
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
+    #aui-box-footer:after,
+    .aui-box-btn:after {
+        right: -100%;
+        bottom: -100%;
+        -webkit-transform: scale(0.5);
+    }
+}
+@-webkit-keyframes fadeIn {
+    0% { background: rgba(0,0,0,0);opacity: 0;}
+    100% { opacity: 1; }
+}

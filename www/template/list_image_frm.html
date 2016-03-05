@@ -1,0 +1,19 @@
+<div class="aui-content">
+    <p class="aui-padded-10">全是缩略图的布局样式</p>
+    <ul class="aui-list-view aui-grid-view">
+        <li class="aui-list-view-cell aui-img aui-col-xs-4" ng-repeat="s in [0,1,2,3,4,5]">
+            <img class="aui-img-object" lazy-src="{{imgUrl}}" animate-visible="true" animate-speed="2s">
+        </li>
+    </ul>
+    <p class="aui-padded-10">图片列表 一行两列，借助我们的栅格来实现</p>
+    <ul class="aui-list-view aui-grid-view">
+        <li class="aui-list-view-cell aui-img aui-col-xs-6" ng-repeat="s in [0,1,2,3,4,5,6,7,8,9,10,11,13,12,14,15,16,17]">
+            <!--<img class="aui-img-object" lazy-src="{{demoUrl}}" animate-visible="true" animate-speed="2s">-->
+            <div style="height:100px;" background-lazy-src="{{demoUrl}}" animate-visible="true" animate-speed="2s"></div>
+            <div class="aui-img-body">
+                图文列表
+            </div>
+        </li>
+    </ul>
+
+</div>

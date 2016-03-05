@@ -1,0 +1,28 @@
+<header class="aui-bar aui-bar-nav aui-bar-primary" >
+    <a class="aui-btn aui-btn-primary aui-pull-left" ng-click="go('list')">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+    <div class="aui-title">标题</div>
+</header>
+<div ui-view style="width:100%;position: absolute;top:45px;bottom:55px;overflow-y: scroll;/* winphone8和android4+ */ -webkit-overflow-scrolling: touch;
+" class="routerGroup {{ pageClass }}"  lazy-container></div>
+<footer class="aui-nav">
+    <ul class="aui-bar-tab">
+        <li ng-class="{'active-primary': name =='tab.index'}" ui-sref=".index">
+            <span class="aui-iconfont aui-icon-home"></span>
+            <p >主页</p>
+        </li>
+        <li ng-class="{'active-primary': name =='tab.circle'}" ui-sref=".circle">
+            <span class="aui-iconfont aui-icon-discover"></span>
+            <p >发现</p>
+        </li>
+        <li ng-class="{'active-primary': name =='tab.new'}" ui-sref=".new">
+            <span class="aui-iconfont aui-icon-community"></span>
+            <p >消息</p>
+        </li>
+        <li ng-class="{'active-primary': name =='tab.my'}" ui-sref=".my">
+            <span class="aui-iconfont aui-icon-people"></span>
+            <p >我</p>
+        </li>
+    </ul>
+</footer>

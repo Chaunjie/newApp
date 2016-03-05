@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--<base href="www">-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <title></title>
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+
+        }
+
+        #form-views {
+            position: absolute;
+            top: 0;
+            bottom: 0px;
+            width: 100%;
+             overflow-y: scroll;overflow:auto;/* winphone8和android4+ */
+             -webkit-overflow-scrolling: touch;
+        }
+
+        /*for page animate*/
+        #form-views.ng-enter, .routerGroup.ng-enter {
+            -webkit-animation-duration: 0s;
+            animation-duration: 0s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+
+        #form-views.ng-leave, .routerGroup.ng-leave {
+            -webkit-animation-duration: 0s;
+            animation-duration: 0s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+
+    </style>
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/aui.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/iscroll.css">
+    <link rel="stylesheet" href="css/dropload.css">
+    <link rel="stylesheet" href="css/xpull.css">
+</head>
+<body ng-app="NewsApp" ng-controller="AppCtrl">
+<script src="lib/swiper.min.js"></script>
+<script src="./js/jquery.js"></script>
+<script src="./lib/angular.min.js"></script>
+<script src="./js/xpull.js"></script>
+<script src="./lib/angular-ui-router.js"></script>
+<script src="./js/angular-swiper.js"></script>
+<script src="./lib/angular-animate.min.js"></script>
+<script src="./js/dropload.js"></script>
+
+<script src="./js/app.js"></script>
+<script src="./js/xu-lazy.js"></script>
+<script src="./js/controller.js"></script>
+<script src="./js/services.js"></script>
+<script src="./js/directives.js"></script>
+
+
+<div class="page {{ pageClass }}" ui-view id="form-views" lazy-container></div>
+</body>
+</html>
