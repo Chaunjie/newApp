@@ -19,3 +19,4 @@
 4. 本地跑项目
 
         node serve
+        在浏览器输入http://localhost:5000/即可
