@@ -34,7 +34,7 @@ gulp.task('compress', function () {
 });
 
 gulp.task('build', function (done) {
-  runSequence('rsync', 'minify-html', 'minify-js-css', 'minifypng', 'local-publish', done);
+  runSequence('rsync', 'minify-html', 'minify-js-css', 'minifypng', done);
 });
 
 gulp.task('rsync', function (done) {

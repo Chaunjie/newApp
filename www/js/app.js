@@ -36,7 +36,7 @@ angular.module('NewsApp', ['ngAnimate', 'NewsApp.controllers', 'NewsApp.services
         }]);
     }])
 
-    .config(function ($stateProvider, $urlRouterProvider) {
+    .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
         $stateProvider
             .state('list', {
                 url: '/list',
@@ -231,5 +231,5 @@ angular.module('NewsApp', ['ngAnimate', 'NewsApp.controllers', 'NewsApp.services
         ;
         $urlRouterProvider.otherwise('/list');
 
-    })
+    }])
 ;

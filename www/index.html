@@ -40,6 +40,7 @@
         }
 
     </style>
+    <!-- build:css css/combined.css -->
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/aui.css">
     <link rel="stylesheet" href="css/swiper.min.css">
@@ -47,8 +48,10 @@
     <link rel="stylesheet" href="css/iscroll.css">
     <link rel="stylesheet" href="css/dropload.css">
     <link rel="stylesheet" href="css/xpull.css">
+    <!-- endbuild -->
 </head>
 <body ng-app="NewsApp" ng-controller="AppCtrl">
+<!-- build:js js/combined.js -->
 <script src="lib/swiper.min.js"></script>
 <script src="./js/jquery.js"></script>
 <script src="./lib/angular.min.js"></script>
@@ -63,6 +66,7 @@
 <script src="./js/controller.js"></script>
 <script src="./js/services.js"></script>
 <script src="./js/directives.js"></script>
+<!-- endbuild -->
 
 
 <div class="page {{ pageClass }}" ui-view id="form-views" lazy-container></div>
