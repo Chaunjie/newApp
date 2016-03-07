@@ -5,6 +5,7 @@
     
 ### 跑项目
     cd newApp;
+    npm install;
     gulp serve;
 
 ### 自动化程序
