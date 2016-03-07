@@ -47,6 +47,14 @@ gulp.task('rsync', function (done) {
     done();
   });
 });
+gulp.task('openChome', function(done){
+  var command = ' open -a "/Applications/Google Chrome.app"';
+  sh.exec(command, function() {
+    sh.exec('open -a "/Applications/Google Chrome.app" google-chrome ="http://www.baidu.com"', function(){
+      done();
+    })
+  })
+})
 
 gulp.task('minify-html', function () {
   var opts = {
