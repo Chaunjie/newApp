@@ -2,6 +2,10 @@
 
 ###克隆代码
     git clone https://github.com/xudao520/newApp.git;
+    
+### 跑项目
+    cd newApp;
+    gulp serve;
 
 ### 自动化程序
 1. 压缩html代码.

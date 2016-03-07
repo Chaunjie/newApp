@@ -20,6 +20,7 @@ var jshint = require('gulp-jshint');
 var minifyHTML = require('gulp-minify-html');
 var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant');
+var browserSync = require('browser-sync');
 var fs = require('fs');
 var SshClient = require('ssh2').Client;
 var sourceFiles = 'www/.';
@@ -47,14 +48,22 @@ gulp.task('rsync', function (done) {
     done();
   });
 });
-gulp.task('openChome', function(done){
-  var command = ' open -a "/Applications/Google Chrome.app"';
-  sh.exec(command, function() {
-    sh.exec('open -a "/Applications/Google Chrome.app" google-chrome ="http://www.baidu.com"', function(){
-      done();
-    })
+gulp.task('serve', function(done){
+  sh.cd('./www');
+  var command = 'browser-sync start --server --files "index.html"';
+  sh.exec(command, function(){
+    done();
   })
 })
+
+gulp.task('browser-sync', function() {
+  browserSync({
+    files: "**",
+    server: {
+      baseDir: "./www/index.html"
+    }
+  });
+});
 
 gulp.task('minify-html', function () {
   var opts = {

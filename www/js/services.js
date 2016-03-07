@@ -1,5 +1,5 @@
 angular.module('NewsApp.services', [])
-    
+
     .factory('XuPopup', ['$q', '$timeout', '$http', '$compile', function ($q, $timeout, $http, $compile) {
         function getIndexTest(DOM){
            var attrArrs =  DOM[0].currentTarget.attributes;
